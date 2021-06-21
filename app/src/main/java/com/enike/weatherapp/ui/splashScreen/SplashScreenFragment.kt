@@ -11,17 +11,11 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.enike.weatherapp.R
 import com.enike.weatherapp.Utils
+import com.enike.weatherapp.core.BaseFragment
 import com.enike.weatherapp.databinding.FragmentSplashScreenBinding
 
-class SplashScreenFragment : Fragment() {
-
-   private lateinit var binding : FragmentSplashScreenBinding
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_splash_screen,container,false)
-        return binding.root
-    }
+class SplashScreenFragment :
+    BaseFragment<FragmentSplashScreenBinding>(R.layout.fragment_splash_screen) {
 
     override fun onResume() {
         super.onResume()
@@ -31,7 +25,7 @@ class SplashScreenFragment : Fragment() {
                 view.findNavController()
                     .navigate(SplashScreenFragmentDirections.actionSplashScreenFragmentToHomeFragment())
             }
-        },Utils.Constants.SPLASH_SCREEN_DURATION)
+        }, Utils.Constants.SPLASH_SCREEN_DURATION)
     }
 
     private fun loadAnimations(){
