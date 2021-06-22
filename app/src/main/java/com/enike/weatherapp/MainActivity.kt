@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setTransparentStatusBar()
     }
-
+    
 
     private fun setTransparentStatusBar() {
         // Hide the status bar.
