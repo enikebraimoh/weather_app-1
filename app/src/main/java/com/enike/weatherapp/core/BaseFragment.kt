@@ -26,8 +26,12 @@ abstract class BaseFragment<dataBinding : ViewDataBinding>(@LayoutRes open val l
         savedInstanceState: Bundle?
     ): View? {
         start(inflater, container!!)
-        start()
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        start()
     }
 
 }
