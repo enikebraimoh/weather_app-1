@@ -12,10 +12,11 @@ import androidx.navigation.findNavController
 import com.enike.weatherapp.R
 import com.enike.weatherapp.Utils
 import com.enike.weatherapp.core.BaseFragment
+import com.enike.weatherapp.core.FullScreenBaseFragment
 import com.enike.weatherapp.databinding.FragmentSplashScreenBinding
 
 class SplashScreenFragment :
-    BaseFragment<FragmentSplashScreenBinding>(R.layout.fragment_splash_screen) {
+    FullScreenBaseFragment<FragmentSplashScreenBinding>(R.layout.fragment_splash_screen) {
 
     override fun onResume() {
         super.onResume()

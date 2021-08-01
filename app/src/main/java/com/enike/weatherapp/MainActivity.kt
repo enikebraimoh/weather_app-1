@@ -12,17 +12,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setTransparentStatusBar()
     }
-    
 
-    private fun setTransparentStatusBar() {
-        // Hide the status bar.
-        window.decorView.apply {
-            systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-            systemUiVisibility =
-                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_FULLSCREEN
-
-        }
-    }
 }
